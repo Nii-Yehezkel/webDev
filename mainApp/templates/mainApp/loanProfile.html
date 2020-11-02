@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/loanProfile.css' %}">
+    <title>LoanProfile</title>
+</head>
+<body>
+    <div class="container">
+        <div class="banner-text">
+
+            <h2>Pay your loan here</h2>
+
+                <form method ="GET" action="">
+                    {% csrf_token %}
+                    <label for="LoanID">
+                        <input type="text" placeholder="LoanID" name="LoanID" value="{{ loanProfile_view }}" required
+                               oninvalid="this.setCustomValidity('LoanID cannot be empty')" oninput="this.setCustomValidity('')">
+                    </label>
+                        <input type="submit" value="pay">
+                </form>
+            <p>{{hi}}</p>
+
+        </div>
+
+        <div class="animation-area">
+            <ul class="box-area">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
