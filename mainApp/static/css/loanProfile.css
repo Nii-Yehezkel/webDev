@@ -5,32 +5,44 @@
 
 body {
     font-family: Baloo;
+    background: #a2cee5;
 }
-.container {
+/*.container {
+    background-color: #BF12;
     padding: 0;
     margin: 0;
     position: relative;
-}
+}*/
 
+.loanResponse {
+    text-align: left;
+    width: 50%;
+    height: 5%;
+    margin: 5% 0 0 25%;
+    padding: 1% 1% 1% 1%
+}
 .banner-text {
+    height: 100vh;
     width: 100%;
     position: absolute;
-    z-index: 1;
+    background: #a2cee5;
+
 }
 
-.banner-text ul {
+
+/*.banner-text ul {
     height: 10px;
     float: right;
     margin-right: 17px;
-}
+}*/
 
-.banner-text ul li {
+/*.banner-text ul li {
     display: inline-block;
     padding: 40px 15px;
     text-transform: uppercase;
     color: #fff;
     font-size: 15px;
-}
+}*/
 
 .banner-text h2 {
     text-align: center;
@@ -40,6 +52,7 @@ body {
 }
 
 form {
+    width: 100%;
     text-align: center;
     margin-top: 2%;
 }
@@ -50,8 +63,18 @@ label input {
 }
 
 input {
-    height: 40px;
-    width: 7%;
+    height: 41px;
+    width: 8%;
+}
+.paid {
+    color: #000;
+    width: 50%;
+    background: #fff;
+    text-align: left;
+    padding-left: 40px;
+    margin: 2% 0 0 25%;
+    border-radius: 4px;
+    display: block;
 }
 
 
@@ -63,10 +86,11 @@ input {
 
 
 
-.animation-area {
+
+/*.animation-area {
     background: linear-gradient(to top, #b1d3e7, #688fa5);
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .box-area {
@@ -74,7 +98,7 @@ input {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -148,4 +172,4 @@ input {
         transform: translateY(-800px) rotate(360deg);
         opacity: 0;
     }
-}
+}*/

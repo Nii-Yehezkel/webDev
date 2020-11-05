@@ -7,34 +7,32 @@
     <title>LoanProfile</title>
 </head>
 <body>
-    <div class="container">
-        <div class="banner-text">
+    <div class="banner-text">
 
-            <h2>Pay your loan here</h2>
-
-                <form method ="GET" action="">
-                    {% csrf_token %}
-                    <label for="LoanID">
-                        <input type="text" placeholder="LoanID" name="LoanID" value="{{ loanProfile_view }}" required
-                               oninvalid="this.setCustomValidity('LoanID cannot be empty')" oninput="this.setCustomValidity('')">
-                    </label>
-                        <input type="submit" value="pay">
-                </form>
-            <p>{{hi}}</p>
-
+        <h2>Pay your loan here</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <label for="LoanID">
+                <input type="text" placeholder="LoanID" name="LoanID" id="loanIn"  required
+                       oninvalid="this.setCustomValidity('LoanID cannot be empty')" oninput="this.setCustomValidity('')">
+            </label>
+            <!--<button onclick={handleClick()} type="submit" >Pay</button>-->
+            <input type="submit" value="Pay" class="pay">
+        </form>
+        <p><h1 style="margin: 2% 0 0 40%; color: #fff">Loan details</h1></p>
+        <div class="paid">
+            <h3><pre>{{ response  | pprint}}</pre></h3>
         </div>
-
-        <div class="animation-area">
-            <ul class="box-area">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-
     </div>
+    <script>
+        document.querySelector(".pay").addEventListener("click", () => {
+            //document.querySelector(".loanResponse").style.display = "none";
+            document.querySelector(".paid").style.display = "block";
+            setTimeout(() => {
+                if (document.getElementById("loanIn").value===''){}
+                else { alert('Loan paid successfully') }
+                })
+            ,3000})
+    </script>
 </body>
 </html>

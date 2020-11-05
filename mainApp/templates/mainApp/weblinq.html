@@ -11,6 +11,7 @@
     <div class="wrapper">
         <div class="close">x</div>
         <H1>Login</H1>
+        <!-- FORM -->
         <form method ="POST" action="">
             {% csrf_token %}
             <label>
@@ -33,10 +34,10 @@
             <a href="#">Forgot Password</a>
         </div>
         <div class="socials">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-pinterest"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook">f</i></a>
+            <a href="#"><i class="fa fa-twitter">t</i></a>
+            <a href="#"><i class="fa fa-pinterest">P</i></a>
+            <a href="#"><i class="fa fa-linkedin">Ln</i></a>
         </div>
         <div class="signup-link">Not a member? <a href="#">Signup now</a> </div>
     </div>
@@ -51,6 +52,17 @@
             <source src="{% static 'video/pay.mp4' %}" type="video/mp4">
         </video>
     </div>
-    <script src="{% static 'javaScript/script.js' %}"></script>
+<script>
+    document.getElementById("btn").addEventListener("click", () => {
+        document.querySelector(".wrapper").style.display = "block";
+        document.querySelector("#btn").style.display = "none";
+    })
+
+    document.querySelector(".close").addEventListener("click", () => {
+        document.querySelector(".wrapper").style.display = "none";
+        document.querySelector("#btn").style.display = "block";
+    })
+</script>
+    <!--<script src="{% static 'javaScript/script.js' %}"></script>-->
 </body>
 </html>
